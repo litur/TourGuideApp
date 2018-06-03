@@ -13,11 +13,22 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="people">Persone</string>
+
+    <!-- Tab names -->
+    <string name="people">People</string>
+    <string name="sites">Sites</string>
+    <string name="events">Events</string>
+
+
     <string name="mailChooserMsg">Select an App to send the email</string>
+    <string name="label_where">Where:</string>
+    <string name="label_when">When:</string>
+    <string name="label_contact">Contact:</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="sites">Siti</string>
-    <string name="events">Eventi</string>
+    <string name="projects">Projects</string>
+    <string name="label_due">Due date:</string>
+
+
 </resources>

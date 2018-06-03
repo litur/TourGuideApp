@@ -10,10 +10,9 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 /**
- * A simple {@link Fragment} subclass.
+ * A simple {@link Fragment} subclass to display a list of Sites.
  */
 public class SiteFragment extends Fragment {
-
 
     // gets the ArrayList of People created in the SplashActivity
     ArrayList<Site> sites = SplashActivity.MSITE.getList();

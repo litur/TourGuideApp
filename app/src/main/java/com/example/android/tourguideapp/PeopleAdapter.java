@@ -95,14 +95,14 @@ public class PeopleAdapter extends ArrayAdapter<People> {
             }
         });
 
-        //Finds the avatar image
+        //Finds the avatar image and sets the Image Resource
         ImageView avatarImage = listItemView.findViewById(R.id.peopleImage);
         avatarImage.setImageResource(getImageResourceforAvatar(currentPeople.getId()));
 
         // Finds the phone Icon Button
         ImageButton btnPhone = listItemView.findViewById(R.id.phoneIcon);
 
-        // sets an onClickListener on the phone button to make a call
+        // sets an onClickListener on the phone button to make a call to the phone of the People
         btnPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -117,8 +117,14 @@ public class PeopleAdapter extends ArrayAdapter<People> {
         return listItemView;
     }
 
-    //TODO add comment here
+    /**
+     * This helper gets the Image ResourceId fot a person/people
+     * @param peopleId the id of a People Object
+     * @return the id of the asset
+     * If the People object doesn't have a valid photo id (photoId equal to -1), the helper gets the id of a default avatar depending on the gender of the people/person
+     */
     private int getImageResourceforAvatar(int peopleId) {
+        //if the People d
         if (MPEOPLE.getPeoplePhotoId(peopleId) == -1) {
             if (MPEOPLE.getPeopleGender(peopleId) == Constants.GENDER_MALE)
                 return R.drawable.if_user_male;

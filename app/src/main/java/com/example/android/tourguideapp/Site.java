@@ -13,6 +13,9 @@ public class Site {
     private String address;
     private String description;
 
+    /**
+     * Constructs a new Site with values for id, name, city, address, description of the Site
+     */
     public Site(int mId, String mName, String mCity, String mAddress, String mDescription) {
 
         id = mId;
@@ -22,22 +25,37 @@ public class Site {
         description = mDescription.trim();
     }
 
+    /**
+     * Gets the Name of the site of the Company
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Gets the Address of the site of the Company
+     */
     public String getAddress() {
         return address;
     }
 
+    /**
+     * Gets the City of the site of the Company
+     */
     public String getCity() {
         return city;
     }
 
+    /**
+     * Gets the Id of the site of the Company
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Gets the description of the Site of the Company
+     */
     public String getDescription() {
         return description;
     }

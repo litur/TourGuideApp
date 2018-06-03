@@ -14,7 +14,7 @@ public class PeopleList extends ArrayList {
         peopleArrayList = new ArrayList<People>();
     }
 
-    //We create an ArrayList of People Objects
+    //We create an ArrayList of People Objects used throughout the whole App
 
     public PeopleList() {
 
@@ -23,8 +23,13 @@ public class PeopleList extends ArrayList {
         peopleArrayList.add(new People(2, "Carol", "Brown", "Training Project Manager", 1, "c.brown@igeam.it", 333333333, Constants.GENDER_FEMALE));
         peopleArrayList.add(new People(3, "Frank", "Blaze", "HS Consultant", 1, "f.blaze@igeam.it", 333333333, Constants.GENDER_MALE));
         peopleArrayList.add(new People(4, "Michelle", "Black", "HS Project Manager", 0, "m.black@igeam.it", 333333333, Constants.GENDER_FEMALE));
+        peopleArrayList.add(new People(5, "Laura", "Filmore", "Human Resources", 0, "l.filmore@igeam.it", 333333333, Constants.GENDER_FEMALE));
+        peopleArrayList.add(new People(6, "Alex", "Del Grande", "Finance", 1, "a.delgrande@igeam.it", 2222222, Constants.GENDER_MALE));
+        peopleArrayList.add(new People(7, "Michael", "Giacchino", "Marketing", 1, "m.gioacchino@igeam.it", 2222222, Constants.GENDER_MALE));
+        peopleArrayList.add(new People(8, "Anna", "Graemes", "Marketing", 1, "a.graemes@igeam.it", 2222222, Constants.GENDER_FEMALE));
     }
 
+    //Returns the whole PeopleList
     public ArrayList<People> getList() {
         return peopleArrayList;
     }
@@ -53,9 +58,7 @@ public class PeopleList extends ArrayList {
         return peopleArrayList.get(id).getPhotoId();
     }
 
-    public String getPeopleNameAndSurname(int id) {
-        return peopleArrayList.get(id).getNameAndSurname();
-    }
+    public String getPeopleNameAndSurname(int id) { return peopleArrayList.get(id).getNameAndSurname(); }
 }
 
 

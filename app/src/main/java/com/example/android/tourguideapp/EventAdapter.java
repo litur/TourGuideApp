@@ -21,6 +21,7 @@ import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TimeZone;
 
 public class EventAdapter extends ArrayAdapter {
     public EventAdapter(@NonNull Activity context, ArrayList<Event> Event) {
@@ -88,33 +89,37 @@ public class EventAdapter extends ArrayAdapter {
 
         // Finds the TextView for the Event date and sets the value
         TextView eventDate = listItemView.findViewById(R.id.eventDate);
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/YYYY hh.mm");
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/YYYY H.mm");
         String myEventDate = formatter.format(currentEvent.getEventDate());
         eventDate.setText(myEventDate);
 
         // Finds the TextView for the Event contact and sets the value
-        TextView eventContact = listItemView.findViewById(R.id.eventContact);
+        TextView eventContact = listItemView.findViewById(R.id.projectContact);
         eventContact.setText(SplashActivity.MPEOPLE.getPeopleNameAndSurname(currentEvent.getEventContatctPersonId()));
 
         // Finds the ImageView for the Event Image and sets the value for the resource
-        ImageView eventImage = listItemView.findViewById(R.id.eventImg);
+        ImageView eventImage = listItemView.findViewById(R.id.projectImg);
         eventImage.setImageResource(currentEvent.getEventRawId());
 
-        //Finds the ImageButton for the map and sets an onClickListener to open the Map for the EventLocation
+        //Finds the ImageButton for the calendar and sets an onClickListener to create a Calendar event for the Event
         ImageButton calButton = listItemView.findViewById(R.id.eventCalendarBtn);
 
         calButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Long mDateinmillis;
-                mDateinmillis = currentEvent.getEventDate().getTime();
+                Long mDateinmillis = currentEvent.getEventDate().getTime();
+
                 Log.d("CLICK ON CALENDAR BTN", String.valueOf(mDateinmillis));
                 Intent calendarIntent = new Intent(Intent.ACTION_EDIT);
                 calendarIntent.setType("vnd.android.cursor.item/event");
+                
                 calendarIntent.putExtra(CalendarContract.Events.TITLE, currentEvent.getName());
                 calendarIntent.putExtra(CalendarContract.Events.EVENT_LOCATION, currentEvent.getLocationCity() + ", " + currentEvent.getLocationAddress());
-                calendarIntent.putExtra(CalendarContract.Events.DTSTART, String.valueOf(mDateinmillis));
-                calendarIntent.putExtra(CalendarContract.Events.DTEND, mDateinmillis + currentEvent.getDuration() * 1000 * 3600);
+                calendarIntent.putExtra(CalendarContract.Events.ORGANIZER,"l.rutigliano@igeam.it");
+                calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY,"false");
+                calendarIntent.putExtra(CalendarContract.Events.EVENT_TIMEZONE, TimeZone.getDefault());
+                calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, mDateinmillis);
+                calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, mDateinmillis + currentEvent.getDuration() * 1000 * 3600);
 
                 // Making it private and shown as busy
                 calendarIntent.putExtra(CalendarContract.Events.ACCESS_LEVEL, CalendarContract.Events.ACCESS_PRIVATE);

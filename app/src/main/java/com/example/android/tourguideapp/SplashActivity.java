@@ -11,6 +11,7 @@ public class SplashActivity extends AppCompatActivity {
     public static final PeopleList MPEOPLE = new PeopleList();
     public static final SiteList MSITE = new SiteList();
     public static final EventList MEVENT = new EventList();
+    public static final ProjectList MPROJECT = new ProjectList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -16,6 +16,7 @@ public class Event {
     private int eventRawId;
     private int eventContatctPersonId;
     private Date eventDate;
+    //duration in hours
     private int duration;
 
     /**

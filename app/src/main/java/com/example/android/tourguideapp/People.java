@@ -2,7 +2,7 @@ package com.example.android.tourguideapp;
 
 /**
  * Created by RutiglianoL on 18/05/2018.
- * Represents a People of the Organization/Company
+ * Represents a People/Person of the Organization/Company
  */
 
 public class People {
@@ -15,6 +15,7 @@ public class People {
     private int locationId;
     private int phone;
     private int gender;
+    // assign photoId -1 if you want to use default avatar icons
     private int photoId;
 
     /**
@@ -49,42 +50,72 @@ public class People {
         photoId = -1;
     }
 
+    /**
+     * Gets the id of the People of the Company
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Gets the name the People of the Company
+     */
     public String getName() {
         return name;
     }
 
-    public String getRole() {
-        return role;
-    }
-
-    public String getNameAndSurname() {
-        return name + " " + surname;
-    }
-
+    /**
+     * Gets the Surname of the People of the Company
+     */
     public String getSurname() {
         return surname;
     }
 
+    /**
+     * Gets the Role of the People of the Company
+     */
+    public String getRole() {
+        return role;
+    }
+
+    /**
+     * Gets a String formed by the concatenated name and surname of the People of the Company
+     */
+    public String getNameAndSurname() {
+        return name + " " + surname;
+    }
+
+    /**
+     * Gets the Surname of the People of the Company
+     */
     public String getEmail() {
         return email;
     }
 
+    /**
+     * Gets the Location Id of the People of the Company
+     */
     public int getLocationId() {
         return locationId;
     }
 
+    /**
+     * Gets the Phonr number of the People of the Company
+     */
     public int getPhone() {
         return phone;
     }
 
+    /**
+     * Gets the Gender of the People of the Company
+     */
     public int getGender() {
         return gender;
     }
 
+    /**
+     * Gets the Id of the Raw for the Photo of the People
+     */
     public int getPhotoId() {
         return photoId;
     }

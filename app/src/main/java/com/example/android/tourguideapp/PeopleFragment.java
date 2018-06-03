@@ -9,9 +9,8 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-
 /**
- * A fragment representing a list of People.
+ * A simple {@link Fragment} subclass to display a list of People.
  */
 public class PeopleFragment extends Fragment {
 
@@ -38,17 +37,5 @@ public class PeopleFragment extends Fragment {
         listView.setAdapter(adapter);
         return rootView;
     }
-
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
 
 }

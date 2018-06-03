@@ -26,11 +26,11 @@
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:textAppearance="?attr/textAppearanceListItem"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/peopleImage"
-        app:layout_constraintTop_toBottomOf="@+id/people_name_surname"
+        app:layout_constraintTop_toBottomOf="@+id/people_location"
         tools:text="RD Manager" />
 
     <TextView
@@ -39,9 +39,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/people_name_surname"
-        app:layout_constraintStart_toEndOf="@+id/people_name_surname"
-        tools:text="Rome" />
+        app:layout_constraintStart_toEndOf="@+id/peopleImage"
+        app:layout_constraintTop_toBottomOf="@+id/people_name_surname"
+        tools:text="Rome Office" />
 
     <ImageButton
         android:id="@+id/mailIcon"

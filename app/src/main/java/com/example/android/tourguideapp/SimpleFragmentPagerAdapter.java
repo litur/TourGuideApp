@@ -35,6 +35,9 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
             case 2:
                 myFragment = new EventFragment();
                 break;
+            case 3:
+                myFragment = new ProjectFragment();
+                break;
         }
         return myFragment;
     }
@@ -42,7 +45,7 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
     // Specifies the number of fragments to be handled by the adapter
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 
     // Gets the name of the Page/Fragmet to be shown in the Tab header
@@ -58,6 +61,9 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
                 break;
             case 2:
                 mPageTitle = mContext.getString(R.string.events);
+                break;
+            case 3:
+                mPageTitle = mContext.getString(R.string.projects);
                 break;
         }
         return mPageTitle;
