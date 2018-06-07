@@ -50,6 +50,10 @@ public class PeopleList extends ArrayList {
         return peopleArrayList.get(id).getPhone();
     }
 
+    public String getPeopleMail(int id) {
+        return peopleArrayList.get(id).getEmail();
+    }
+
     public int getPeopleGender(int id) {
         return peopleArrayList.get(id).getGender();
     }

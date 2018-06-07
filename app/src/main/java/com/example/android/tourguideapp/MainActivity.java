@@ -3,7 +3,10 @@ package com.example.android.tourguideapp;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,6 +14,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Sets the Toolbar as Action Bar
+        Toolbar myToolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
+        // Defines custom behaviour on the Action Bar
+        ActionBar myActionBar = getSupportActionBar();
+        assert myActionBar != null;
+        myActionBar.setTitle("Explore our Company");
+        myActionBar.setElevation(8);
 
         // Find the view pager that will allow the user to swipe between fragments
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
@@ -24,5 +37,16 @@ public class MainActivity extends AppCompatActivity {
         // Give the TabLayout the ViewPager
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        tabLayout.setElevation(8);
+    }
+
+    // Inflates buttons in the action bar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.action_bar, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 }
+
+

@@ -35,7 +35,7 @@ public class Event {
     }
 
     /**
-     * Gets the City of the ContactPerson of the Event
+     * Gets the Id of the ContactPerson of the Event
      */
     public int getEventContatctPersonId() {
         return eventContatctPersonId;

@@ -2,18 +2,24 @@ package com.example.android.tourguideapp;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ProjectAdapter extends ArrayAdapter {
     public ProjectAdapter(@NonNull Activity context, ArrayList<Project> Project) {
@@ -66,6 +72,61 @@ public class ProjectAdapter extends ArrayAdapter {
         String myProjectDate = formatter.format(currentProject.getDueDate());
         projectDate.setText(myProjectDate);
 
+        // Finds the ImageButton for the sending emails
+        ImageButton mailBtn = listItemView.findViewById(R.id.mailIcon);
+
+        // sets an onClickListener on the mail button to send an email
+        mailBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // specifying SENDTO for the Intent makes sure that only email apps are selected to handle the intente
+                // Creats the intent
+                Intent mailIntent = new Intent(Intent.ACTION_SENDTO);
+                mailIntent.setData(Uri.parse("mailto:")); // only email apps should handle this
+                mailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{SplashActivity.MPEOPLE.getPeopleMail(currentProject.getProjectContatctPersonId())}); // recipients
+                mailIntent.putExtra(Intent.EXTRA_SUBJECT, "Info about project " + currentProject.getName());
+                // Checks if an app to handle the intent Exists
+                PackageManager packageManager = getContext().getPackageManager();
+                List<ResolveInfo> activities = packageManager.queryIntentActivities(mailIntent,
+                        PackageManager.MATCH_DEFAULT_ONLY);
+                boolean isIntentSafe = activities.size() > 0;
+
+                // If at least a proper App exists, the Activity is started
+                Intent chooser = Intent.createChooser(mailIntent, getContext().getString(R.string.mailChooserMsg));
+                Log.d("CLICK", (String.valueOf(isIntentSafe)));
+                if (isIntentSafe) {
+                    getContext().startActivity(chooser);
+                }
+
+            }
+        });
+
+        // Finds the ImageButton for the web site link
+        ImageButton webBtn = listItemView.findViewById(R.id.webIcon);
+
+        // If the project doesn't have a real weblink, we don't render the imageButton
+        if (currentProject.getUrl() == "")
+            webBtn.setVisibility(View.GONE);
+            // Else we render the imageButton and set an onClickListener to open the web url for the Project
+        else
+            webBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent webIntent = new Intent(Intent.ACTION_VIEW);
+                    Uri webpage = Uri.parse(currentProject.getUrl());
+                    webIntent.setData(webpage);
+                    // Checks if an app to handle the intent Exists
+                    PackageManager packageManager = getContext().getPackageManager();
+                    List<ResolveInfo> activities = packageManager.queryIntentActivities(webIntent, PackageManager.MATCH_DEFAULT_ONLY);
+                    boolean isIntentSafe = activities.size() > 0;
+
+                    // If at least a proper App exists, the Activity is started
+                    if (isIntentSafe) {
+                        getContext().startActivity(webIntent);
+                    }
+
+                }
+            });
         return listItemView;
     }
 }

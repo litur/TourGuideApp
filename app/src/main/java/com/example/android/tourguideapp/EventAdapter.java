@@ -94,11 +94,11 @@ public class EventAdapter extends ArrayAdapter {
         eventDate.setText(myEventDate);
 
         // Finds the TextView for the Event contact and sets the value
-        TextView eventContact = listItemView.findViewById(R.id.projectContact);
+        TextView eventContact = listItemView.findViewById(R.id.eventContact);
         eventContact.setText(SplashActivity.MPEOPLE.getPeopleNameAndSurname(currentEvent.getEventContatctPersonId()));
 
         // Finds the ImageView for the Event Image and sets the value for the resource
-        ImageView eventImage = listItemView.findViewById(R.id.projectImg);
+        ImageView eventImage = listItemView.findViewById(R.id.eventImg);
         eventImage.setImageResource(currentEvent.getEventRawId());
 
         //Finds the ImageButton for the calendar and sets an onClickListener to create a Calendar event for the Event
@@ -121,7 +121,7 @@ public class EventAdapter extends ArrayAdapter {
                 calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, mDateinmillis);
                 calendarIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, mDateinmillis + currentEvent.getDuration() * 1000 * 3600);
 
-                // Making it private and shown as busy
+                // Makes the calendar Event  private and shown as busy
                 calendarIntent.putExtra(CalendarContract.Events.ACCESS_LEVEL, CalendarContract.Events.ACCESS_PRIVATE);
                 calendarIntent.putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.AVAILABILITY_BUSY);
 

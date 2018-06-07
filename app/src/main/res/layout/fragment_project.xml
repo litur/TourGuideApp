@@ -32,22 +32,16 @@
                 android:id="@+id/projectTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:autoSizeTextType="uniform"
                 android:background="#E6FFFFFF"
+                android:maxLines="2"
                 android:padding="8dp"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/material_text_display1"
                 android:textStyle="bold"
                 app:fontFamily="@font/audiowide"
                 app:layout_constraintBottom_toBottomOf="@+id/projectImg"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 tools:text="VR Training" />
 
             <TextView
@@ -59,7 +53,10 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:text="TextView"
+                android:ellipsize="end"
+                android:justificationMode="inter_word"
+                android:maxLines="8"
+                tools:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/projectImg" />
@@ -109,6 +106,30 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/projectDueDate"
                 tools:text="James Green" />
+
+            <ImageButton
+                android:id="@+id/mailIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/projectContact"
+                app:srcCompat="@drawable/ic_mail_outline" />
+
+            <ImageButton
+                android:id="@+id/webIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mailIcon"
+                app:srcCompat="@drawable/ic_web_asset" />
 
         </android.support.constraint.ConstraintLayout>
 
