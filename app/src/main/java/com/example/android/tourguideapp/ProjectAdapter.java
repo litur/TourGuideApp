@@ -8,6 +8,7 @@ import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.TextViewCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,6 +58,8 @@ public class ProjectAdapter extends ArrayAdapter {
         // Finds the TextView for the project Name and sets the value
         TextView projectTitle = listItemView.findViewById(R.id.projectTitle);
         projectTitle.setText(currentProject.getName());
+        // sets autosize on the title Textview
+        TextViewCompat.setAutoSizeTextTypeWithDefaults(projectTitle, 1);
 
         // Finds the TextView for the project Description and sets the value
         TextView projectDescription = listItemView.findViewById(R.id.projectDescription);

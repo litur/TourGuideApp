@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.provider.CalendarContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.TextViewCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,6 +56,8 @@ public class EventAdapter extends ArrayAdapter {
         // Finds the TextView for the Event Title  and sets the value
         TextView eventTitle = listItemView.findViewById(R.id.eventTitle);
         eventTitle.setText(currentEvent.getName());
+        // sets autosize on the title Textview
+        TextViewCompat.setAutoSizeTextTypeWithDefaults(eventTitle, 1);
 
         // Finds the TextView for the Event Description and sets the value
         TextView eventDescription = listItemView.findViewById(R.id.eventDescription);
