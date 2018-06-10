@@ -34,22 +34,6 @@ public class PeopleList extends ArrayList {
         return peopleArrayList;
     }
 
-    public String getPeopleName(int id) {
-        return peopleArrayList.get(id).getName();
-    }
-
-    public String getPeopleRole(int id) {
-        return peopleArrayList.get(id).getRole();
-    }
-
-    public String getPeopleSurname(int id) {
-        return peopleArrayList.get(id).getSurname();
-    }
-
-    public int getPeoplePhone(int id) {
-        return peopleArrayList.get(id).getPhone();
-    }
-
     public String getPeopleMail(int id) {
         return peopleArrayList.get(id).getEmail();
     }

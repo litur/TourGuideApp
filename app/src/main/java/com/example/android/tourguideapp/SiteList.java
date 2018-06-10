@@ -29,23 +29,9 @@ public class SiteList extends ArrayList {
         return siteArrayList.get(id).getName();
     }
 
+    //Returns the whole SiteList
     public ArrayList<Site> getList() {
         return siteArrayList;
     }
 
-    public String getAddress(int id) {
-        return siteArrayList.get(id).getAddress();
-    }
-
-    public String getCity(int id) {
-        return siteArrayList.get(id).getCity();
-    }
-
-    public String getDescritpion(int id) {
-        return siteArrayList.get(id).getDescription();
-    }
-
-    public int getId(int id) {
-        return siteArrayList.get(id).getId();
-    }
 }

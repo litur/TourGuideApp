@@ -26,7 +26,8 @@
                 android:src="@drawable/img45001"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/eventTitle"
@@ -93,6 +94,7 @@
                 android:background="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="@+id/eventLocation"
                 app:layout_constraintStart_toEndOf="@+id/eventLocation"
+                android:contentDescription="@string/Event_map_icon_description"
                 app:srcCompat="@drawable/ic_map" />
 
             <TextView
@@ -148,6 +150,7 @@
                 android:background="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="@+id/eventDate"
                 app:layout_constraintStart_toStartOf="@+id/eventMapButton"
+                android:contentDescription="@string/event_calendar_icon_description"
                 app:srcCompat="@drawable/ic_event" />
 
         </android.support.constraint.ConstraintLayout>

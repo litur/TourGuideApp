@@ -105,7 +105,7 @@ public class ProjectAdapter extends ArrayAdapter {
         ImageButton webBtn = listItemView.findViewById(R.id.webIcon);
 
         // If the project doesn't have a real weblink, we don't render the imageButton
-        if (currentProject.getUrl() == "")
+        if (currentProject.getUrl().equals(""))
             webBtn.setVisibility(View.GONE);
             // Else we render the imageButton and set an onClickListener to open the web url for the Project
         else

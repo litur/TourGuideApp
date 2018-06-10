@@ -1,6 +1,5 @@
 package com.example.android.tourguideapp;
 
-import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -16,8 +15,8 @@ public class Utility {
      */
     public static String formatStringforMapIntent(String mCompany, String mAddress, String mCity) {
         String finalAddress = Constants.FIXEDPARTOFTHEADDRESS;
-        String formattedCity = "";
-        String formattedCompany = "";
+        String formattedCity;
+        String formattedCompany;
         String formattedAddress = mAddress.replace(" ", "+");
 
         if (!mCompany.equals("")) {

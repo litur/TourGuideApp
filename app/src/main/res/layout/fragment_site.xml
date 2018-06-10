@@ -12,7 +12,6 @@
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:textAppearance="?attr/textAppearanceListItem"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +26,6 @@
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
-        android:textAppearance="?attr/textAppearanceListItem"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/site_name"
@@ -42,10 +40,11 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/white"
-        android:src="@drawable/ic_map"
+        android:contentDescription="@string/site_map_icon_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_map" />
 
     <ImageButton
         android:id="@+id/phoneIcon"
@@ -59,5 +58,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/mapIcon"
         app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/site_phone_icon_description"
         app:srcCompat="@drawable/ic_phone" />
 </android.support.constraint.ConstraintLayout>
