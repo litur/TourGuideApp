@@ -16,6 +16,9 @@ public class EventList extends ArrayList {
     }
 
     //Creates an ArrayList of Event Objects used throughout the whole App
+    // This is a workaround to solve the lack of a different way to get the information needed to instantiate the objects, for example from a local database
+    // or through a HTTP Request using JSON or a similar data structure. That's the reason while Strings are hardcoded in this part of the code.
+    // These Strings are not part of the Business Intelligence of the app, they are just a mockup of real data
     public EventList() {
 
         EventArrayList.add(new Event(0, "Webinar on ISO 45001", "Our ISO 45001:2018 Overview course delivered by webinar will provide details of the new terms, definitions and key requirements of ISO 45001:2018.\n" +

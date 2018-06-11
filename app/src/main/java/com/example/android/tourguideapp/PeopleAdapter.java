@@ -124,7 +124,6 @@ public class PeopleAdapter extends ArrayAdapter<People> {
      * If the People object doesn't have a valid photo id (photoId equal to -1), the helper gets the id of a default avatar depending on the gender of the people/person
      */
     private int getImageResourceforAvatar(int peopleId) {
-        //if the People d
         if (MPEOPLE.getPeoplePhotoId(peopleId) == -1) {
             if (MPEOPLE.getPeopleGender(peopleId) == Constants.GENDER_MALE)
                 return R.drawable.if_user_male;

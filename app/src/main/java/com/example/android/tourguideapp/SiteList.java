@@ -17,6 +17,9 @@ public class SiteList extends ArrayList {
 
 
 //We create an ArrayList of Site Objects used throughout the whole App
+// This is a workaround to solve the lack of a different way to get the information needed to instantiate the objects, for example from a local database
+// or through a HTTP Request using JSON or a similar data structure. That's the reason while Strings are hardcoded in this part of the code.
+// These Strings are not part of the Business Intelligence of the app, they are just a mockup of real data
 
     public SiteList() {
 
