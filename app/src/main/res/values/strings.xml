@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">TourGuideApp</string>
 
     <!-- Strings related to login -->
@@ -39,6 +39,8 @@
     <string name="projcet_web_icon_description">Web Icon. Tap to open the website for the project</string>
     <string name="site_map_icon_description">Map Icon. Tap to open the map for the site</string>
     <string name="site_phone_icon_description">Phone Icon. Tap to call the site.</string>
+    <string name="Main_activity_title">Explore our Company</string>
+    <string name="Info_about_Project">Info about our project <xliff:g example="Virtual Reality Training" id="myProject">%s </xliff:g> </string>
 
 
 </resources>

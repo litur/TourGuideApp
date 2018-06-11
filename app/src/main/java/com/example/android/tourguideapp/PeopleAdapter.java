@@ -72,7 +72,7 @@ public class PeopleAdapter extends ArrayAdapter<People> {
             @Override
             public void onClick(View view) {
                 // The code in this method will be executed when the Mail Button is clicked on.
-                Log.d("CLICK", "Ho cliccato");
+                Log.d("CLICK", "Clicked on the BtnMail");
 
                 // specifying SENDTO for the Intent makes sure that only email apps are selected to handle the intente
                 // Creats the intent

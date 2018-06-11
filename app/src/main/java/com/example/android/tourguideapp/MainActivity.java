@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         // Defines custom behaviour on the Action Bar
         ActionBar myActionBar = getSupportActionBar();
         assert myActionBar != null;
-        myActionBar.setTitle("Explore our Company");
+        myActionBar.setTitle(R.string.Main_activity_title);
         myActionBar.setElevation(8);
 
         // Find the view pager that will allow the user to swipe between fragments

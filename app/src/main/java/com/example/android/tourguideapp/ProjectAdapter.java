@@ -87,7 +87,7 @@ public class ProjectAdapter extends ArrayAdapter {
                 Intent mailIntent = new Intent(Intent.ACTION_SENDTO);
                 mailIntent.setData(Uri.parse("mailto:")); // only email apps should handle this
                 mailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{SplashActivity.MPEOPLE.getPeopleMail(currentProject.getProjectContatctPersonId())}); // recipients
-                mailIntent.putExtra(Intent.EXTRA_SUBJECT, "Info about project " + currentProject.getName());
+                mailIntent.putExtra(Intent.EXTRA_SUBJECT, getContext().getString(R.string.Info_about_Project, currentProject.getName()));
                 // Checks if an app to handle the intent Exists
                 PackageManager packageManager = getContext().getPackageManager();
                 List<ResolveInfo> activities = packageManager.queryIntentActivities(mailIntent,
@@ -100,7 +100,6 @@ public class ProjectAdapter extends ArrayAdapter {
                 if (isIntentSafe) {
                     getContext().startActivity(chooser);
                 }
-
             }
         });
 
