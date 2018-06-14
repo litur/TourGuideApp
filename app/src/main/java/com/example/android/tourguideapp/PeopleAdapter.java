@@ -18,7 +18,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.android.tourguideapp.SplashActivity.MPEOPLE;
 
 
 public class PeopleAdapter extends ArrayAdapter<People> {
@@ -62,7 +61,7 @@ public class PeopleAdapter extends ArrayAdapter<People> {
 
         // Finds the TextView for the Site name and sets the value
         TextView siteTextView = listItemView.findViewById(R.id.people_location);
-        siteTextView.setText(SplashActivity.MSITE.getName(currentPeople.getLocationId()));
+        siteTextView.setText(currentPeople.getLocation());
 
         // Finds the ImageButton for the sending emails
         ImageButton btnMail = listItemView.findViewById(R.id.mailIcon);
@@ -97,7 +96,7 @@ public class PeopleAdapter extends ArrayAdapter<People> {
 
         //Finds the avatar image and sets the Image Resource
         ImageView avatarImage = listItemView.findViewById(R.id.peopleImage);
-        avatarImage.setImageResource(getImageResourceforAvatar(currentPeople.getId()));
+        avatarImage.setImageResource(getImageResourceforAvatar(currentPeople));
 
         // Finds the phone Icon Button
         ImageButton btnPhone = listItemView.findViewById(R.id.phoneIcon);
@@ -119,17 +118,17 @@ public class PeopleAdapter extends ArrayAdapter<People> {
 
     /**
      * This helper gets the Image ResourceId fot a person/people
-     * @param peopleId the id of a People Object
+     * @param myPeople a People Object
      * @return the id of the asset
      * If the People object doesn't have a valid photo id (photoId equal to -1), the helper gets the id of a default avatar depending on the gender of the people/person
      */
-    private int getImageResourceforAvatar(int peopleId) {
-        if (MPEOPLE.getPeoplePhotoId(peopleId) == -1) {
-            if (MPEOPLE.getPeopleGender(peopleId) == Constants.GENDER_MALE)
+    private int getImageResourceforAvatar(People myPeople) {
+        if (myPeople.getPhotoId() == -1) {
+            if (myPeople.getGender() == Constants.GENDER_MALE)
                 return R.drawable.if_user_male;
             else
                 return R.drawable.if_user_female;
         } else
-            return MPEOPLE.getPeoplePhotoId(peopleId);
+            return myPeople.getPhotoId();
     }
 }

@@ -98,7 +98,7 @@ public class EventAdapter extends ArrayAdapter {
 
         // Finds the TextView for the Event contact and sets the value
         TextView eventContact = listItemView.findViewById(R.id.eventContact);
-        eventContact.setText(SplashActivity.MPEOPLE.getPeopleNameAndSurname(currentEvent.getEventContatctPersonId()));
+        eventContact.setText(currentEvent.getEventContatctPerson());
 
         // Finds the ImageView for the Event Image and sets the value for the resource
         ImageView eventImage = listItemView.findViewById(R.id.eventImg);

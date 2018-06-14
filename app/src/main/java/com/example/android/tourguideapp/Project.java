@@ -12,20 +12,20 @@ public class Project {
     private String name;
     private String description;
     private int projectRawId;
-    private int projectContatctPersonId;
+    private String projectContatctPerson;
     private Date dueDate;
     private String url; // the url of a website with the details for the Project
 
     /**
-     * Constructs a new Project with values for name, description, rawId, contactPersonId
+     * Constructs a new Project with values for name, description, rawId, contactPerson
      */
-    public Project(int mId, String mName, String mDescription, int mProjectRawId, int mProjectContatctPersonId, Date mDueDate, String mUrl) {
+    public Project(int mId, String mName, String mDescription, int mProjectRawId, String mProjectContatctPerson, Date mDueDate, String mUrl) {
 
         id = mId;
         name = mName;
         description = mDescription;
         projectRawId = mProjectRawId;
-        projectContatctPersonId = mProjectContatctPersonId;
+        projectContatctPerson = mProjectContatctPerson;
         dueDate = mDueDate;
         url = mUrl;
 
@@ -48,8 +48,8 @@ public class Project {
     /**
      * Gets the id of the Contact Person of the Project
      */
-    public int getProjectContatctPersonId() {
-        return projectContatctPersonId;
+    public String getProjectContatctPerson() {
+        return projectContatctPerson;
     }
 
     /**

@@ -14,9 +14,6 @@ import java.util.ArrayList;
  */
 public class EventFragment extends Fragment {
 
-    // gets the ArrayList of Event created in the SplashActivity
-    ArrayList<Event> events = SplashActivity.MEVENT.getList();
-
     public EventFragment() {
         // Required empty public constructor
     }
@@ -24,6 +21,11 @@ public class EventFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        final ArrayList<Event> events = new ArrayList<>();
+        events.add(new Event(0, getString(R.string.event_name_0), getString(R.string.event_description_0), getString(R.string.event_location_address_0), getString(R.string.event_city_0), R.drawable.img45001, "Frank Pearson", Utility.convertStringToDate("23-06-2018 15:00", "dd-MM-yyyy H:mm"), 2));
+        events.add(new Event(1, getString(R.string.event_name_1), getString(R.string.event_description_1), getString(R.string.event_location_address_1), getString(R.string.event_city_1), R.drawable.convegno_rischio_chimico, "Mary Anderson", Utility.convertStringToDate("12-07-2018 09:00", "dd-MM-yyyy H:mm"), 4));
+
         View rootView = inflater.inflate(R.layout.list_layout, container, false);
         EventAdapter adapter = new EventAdapter(getActivity(), events);
 

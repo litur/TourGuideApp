@@ -67,7 +67,7 @@ public class ProjectAdapter extends ArrayAdapter {
 
         // Finds the TextView for the project Contact person and sets the value
         TextView projectContact = listItemView.findViewById(R.id.projectContact);
-        projectContact.setText(SplashActivity.MPEOPLE.getPeopleNameAndSurname(currentProject.getProjectContatctPersonId()));
+        projectContact.setText(currentProject.getProjectContatctPerson());
 
         // Finds the TextView for the Project Due date and sets the value
         TextView projectDate = listItemView.findViewById(R.id.projectDueDate);
@@ -86,7 +86,7 @@ public class ProjectAdapter extends ArrayAdapter {
                 // Creats the intent
                 Intent mailIntent = new Intent(Intent.ACTION_SENDTO);
                 mailIntent.setData(Uri.parse("mailto:")); // only email apps should handle this
-                mailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{SplashActivity.MPEOPLE.getPeopleMail(currentProject.getProjectContatctPersonId())}); // recipients
+                mailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{currentProject.getProjectContatctPerson()}); // recipients
                 mailIntent.putExtra(Intent.EXTRA_SUBJECT, getContext().getString(R.string.Info_about_Project, currentProject.getName()));
                 // Checks if an app to handle the intent Exists
                 PackageManager packageManager = getContext().getPackageManager();

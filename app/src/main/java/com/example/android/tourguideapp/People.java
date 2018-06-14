@@ -12,22 +12,22 @@ public class People {
     private String surname;
     private String role;
     private String email;
-    private int locationId;
+    private String location;
     private int phone;
     private int gender;
     // assign photoId -1 if you want to use default avatar icons
     private int photoId;
 
     /**
-     * Constructs a new People with values for name, surname, role, locationId, Email, phone, gender
+     * Constructs a new People with values for name, surname, role, location, Email, phone, gender
      */
-    public People(int mId, String mName, String mSurname, String mRole, int mLocationId, String mEmail, int mPhone, int mGender, int mPhotoid) {
+    public People(int mId, String mName, String mSurname, String mRole, String mLocation, String mEmail, int mPhone, int mGender, int mPhotoid) {
 
         id = mId;
         name = mName;
         surname = mSurname;
         role = mRole;
-        locationId = mLocationId;
+        location = mLocation;
         email = mEmail;
         phone = mPhone;
         gender = mGender;
@@ -37,13 +37,13 @@ public class People {
     /**
      * Constructs a new People with values for name, surname, role, locationId, Email, phone, gender
      */
-    public People(int mId, String mName, String mSurname, String mRole, int mLocationId, String mEmail, int mPhone, int mGender) {
+    public People(int mId, String mName, String mSurname, String mRole, String mLocation, String mEmail, int mPhone, int mGender) {
 
         id = mId;
         name = mName;
         surname = mSurname;
         role = mRole;
-        locationId = mLocationId;
+        location = mLocation;
         email = mEmail;
         phone = mPhone;
         gender = mGender;
@@ -93,10 +93,10 @@ public class People {
     }
 
     /**
-     * Gets the Location Id of the People of the Company
+     * Gets the Location of the People of the Company
      */
-    public int getLocationId() {
-        return locationId;
+    public String getLocation() {
+        return location;
     }
 
     /**

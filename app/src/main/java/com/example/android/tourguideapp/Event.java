@@ -14,7 +14,7 @@ public class Event {
     private String locationAddress;
     private String locationCity;
     private int eventRawId;
-    private int eventContatctPersonId;
+    private String eventContatctPerson;
     private Date eventDate;
     //duration in hours
     private int duration;
@@ -22,14 +22,14 @@ public class Event {
     /**
      * Constructs a new Event with  values for in, name, description, address, city, rawId, ContactPerson, date, duration in hours of the Event
      */
-    public Event(int mId, String mName, String mDescription, String mLocationAddress, String mLocationCity, int mEventRawId, int mEventContatctPersonId, Date mEventDate, int mDuration) {
+    public Event(int mId, String mName, String mDescription, String mLocationAddress, String mLocationCity, int mEventRawId, String mEventContatctPerson, Date mEventDate, int mDuration) {
         id = mId;
         name = mName;
         description = mDescription;
         locationAddress = mLocationAddress;
         locationCity = mLocationCity;
         eventRawId = mEventRawId;
-        eventContatctPersonId = mEventContatctPersonId;
+        eventContatctPerson = mEventContatctPerson;
         eventDate = mEventDate;
         duration = mDuration;
     }
@@ -37,8 +37,8 @@ public class Event {
     /**
      * Gets the Id of the ContactPerson of the Event
      */
-    public int getEventContatctPersonId() {
-        return eventContatctPersonId;
+    public String getEventContatctPerson() {
+        return eventContatctPerson;
     }
 
     /**

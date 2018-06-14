@@ -9,27 +9,24 @@ import java.util.ArrayList;
 public class PeopleList extends ArrayList {
 
     private ArrayList<People> peopleArrayList;
-
     {
-        peopleArrayList = new ArrayList<People>();
+        peopleArrayList = new ArrayList<>();
     }
-
-    //We create an ArrayList of People Objects used throughout the whole App
-    // This is a workaround to solve the lack of a different way to get the information needed to instantiate the objects, for example from a local database
-    // or through a HTTP Request using JSON or a similar data structure. That's the reason while Strings are hardcoded in this part of the code.
-    // These Strings are not part of the Business Intelligence of the app, they are just a mockup of real data
 
     public PeopleList() {
 
-        peopleArrayList.add(new People(0, "Lorenzo", "Rutigliano", "RD Manager", 0, "l.rutigliano@igeam.it", 333333333, Constants.GENDER_MALE, R.drawable.ph0));
-        peopleArrayList.add(new People(1, "Piero", "Blasetti", "HS Project Manager", 1, "p.blasetti@igeam.it", 333333333, Constants.GENDER_MALE));
-        peopleArrayList.add(new People(2, "Carol", "Brown", "Training Project Manager", 1, "c.brown@igeam.it", 333333333, Constants.GENDER_FEMALE));
-        peopleArrayList.add(new People(3, "Frank", "Blaze", "HS Consultant", 1, "f.blaze@igeam.it", 333333333, Constants.GENDER_MALE));
-        peopleArrayList.add(new People(4, "Michelle", "Black", "HS Project Manager", 0, "m.black@igeam.it", 333333333, Constants.GENDER_FEMALE));
-        peopleArrayList.add(new People(5, "Laura", "Filmore", "Human Resources", 0, "l.filmore@igeam.it", 333333333, Constants.GENDER_FEMALE));
-        peopleArrayList.add(new People(6, "Alex", "Del Grande", "Finance", 1, "a.delgrande@igeam.it", 2222222, Constants.GENDER_MALE));
-        peopleArrayList.add(new People(7, "Michael", "Giacchino", "Marketing", 1, "m.gioacchino@igeam.it", 2222222, Constants.GENDER_MALE));
-        peopleArrayList.add(new People(8, "Anna", "Graemes", "Marketing", 1, "a.graemes@igeam.it", 2222222, Constants.GENDER_FEMALE));
+        //peopleArrayList.add(new People(2,"Pippo","Rossi","Capo",0,"email@email.it",33333333,Constants.GENDER_MALE));
+
+        //peopleArrayList.add(new People(0, Resources.getSystem().getString(R.string.people_name_1), Resources.getSystem().getString(R.string.people_surname_1), Resources.getSystem().getString(R.string.people_role_1), 0, Resources.getSystem().getString(R.string.people_email_1), 333333333, Constants.GENDER_MALE, R.drawable.ph0));
+        /*peopleArrayList.add(new People(1, Resources.getSystem().getString(R.string.people_name_2), Resources.getSystem().getString(R.string.people_surname_2), Resources.getSystem().getString(R.string.people_role_2), 1, Resources.getSystem().getString(R.string.people_email_2), 333333333, Constants.GENDER_MALE));
+        peopleArrayList.add(new People(2, Resources.getSystem().getString(R.string.people_name_3), Resources.getSystem().getString(R.string.people_surname_3), Resources.getSystem().getString(R.string.people_role_3), 1, Resources.getSystem().getString(R.string.people_email_3), 333333333, Constants.GENDER_FEMALE));
+        peopleArrayList.add(new People(3, Resources.getSystem().getString(R.string.people_name_4), Resources.getSystem().getString(R.string.people_surname_4), Resources.getSystem().getString(R.string.people_role_4), 1, Resources.getSystem().getString(R.string.people_email_4), 333333333, Constants.GENDER_MALE));
+        peopleArrayList.add(new People(4, Resources.getSystem().getString(R.string.people_name_5), Resources.getSystem().getString(R.string.people_surname_5), Resources.getSystem().getString(R.string.people_role_5), 0, Resources.getSystem().getString(R.string.people_email_5), 333333333, Constants.GENDER_FEMALE));
+        peopleArrayList.add(new People(5, Resources.getSystem().getString(R.string.people_name_6), Resources.getSystem().getString(R.string.people_surname_6), Resources.getSystem().getString(R.string.people_role_6), 0, Resources.getSystem().getString(R.string.people_email_6), 333333333, Constants.GENDER_FEMALE));
+        peopleArrayList.add(new People(6, Resources.getSystem().getString(R.string.people_name_7), Resources.getSystem().getString(R.string.people_surname_7), Resources.getSystem().getString(R.string.people_role_7), 1, Resources.getSystem().getString(R.string.people_email_7), 2222222, Constants.GENDER_MALE));
+        peopleArrayList.add(new People(7, Resources.getSystem().getString(R.string.people_name_8), Resources.getSystem().getString(R.string.people_surname_8), Resources.getSystem().getString(R.string.people_role_8), 1, Resources.getSystem().getString(R.string.people_email_8), 2222222, Constants.GENDER_MALE));
+        peopleArrayList.add(new People(8, Resources.getSystem().getString(R.string.people_name_9), Resources.getSystem().getString(R.string.people_surname_9), Resources.getSystem().getString(R.string.people_role_9), 1, Resources.getSystem().getString(R.string.people_email_9), 2222222, Constants.GENDER_FEMALE));
+*/
     }
 
     //Returns the whole PeopleList

@@ -6,20 +6,15 @@ import android.support.v7.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
-    // Initializes the SongList and AlbumList used throughout the whole application
-    // Since we don't need to modify them for the scope of the app, they are declared as final
-    public static final PeopleList MPEOPLE = new PeopleList();
-    public static final SiteList MSITE = new SiteList();
-    public static final EventList MEVENT = new EventList();
-    public static final ProjectList MPROJECT = new ProjectList();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_splash);
 
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }
+
 }
