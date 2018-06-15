@@ -102,6 +102,8 @@
      \n The advantages of such an approach should be readily apparent. Not only can it cut out distractions, but it can totally immerse the trainee in the simulation, to the point where they begin to respond to it just as they would in a real-life situation.\n
       In other words, not only will trainees acquire information relevant to their job, but they can start practicing their skills right from day one.</string>
     <string name="project_description_2">Manage your organization\'s library of safety data sheets using Chemical Safety\'s cloud-based SDS management software. Employees can easily search and print manufacturer specific SDS\'s.</string>
+    <string name="project_1_contact_person">Mary Ludrow</string>
+    <string name="project_2_contact_person">Frank Red</string>
     <!-- Event Objects attributes -->
     <string name="event_name_0">Webinar on ISO 45001</string>
     <string name="event_name_1">Conference on Chemical Risk</string>
@@ -113,10 +115,11 @@
     \n The technical programme will be constructed around a compelling line-up of invited keynote speakers, who will provide a strategic view from industry, academe and the regulator. Technical presentations should review best practice and latest research in the functional areas that are fundamental to managing process safety effectively. Papers are encouraged from a range of industry sectors on the themes listed opposite.
         \n\n Hazards is an international event and whilst the conference is primarily focused on the Australasian chemical and process industries, contributions are welcomed from all regions where the process safety challenge is being addressed.
     </string>
+    <string name="event_contact_1">Mary Anderson</string>
+    <string name="event_contact_0">Frank Pearson</string>
     <string name="event_location_address_0">Via delle Fornaci 2</string>
     <string name="event_location_address_1">Via della Maglianella 65</string>
     <string name="event_city_0">Roma</string>
     <string name="event_city_1">Milano</string>
-    <string name="project_1_contact_person">Mary Ludrow</string>
-    <string name="project_2_contact_person">Frank Red</string>
+
 </resources>
