@@ -133,8 +133,8 @@ public class EventAdapter extends ArrayAdapter {
                 List<ResolveInfo> activities = packageManager.queryIntentActivities(calendarIntent,
                         PackageManager.MATCH_DEFAULT_ONLY);
                 boolean isIntentSafe = activities.size() > 0;
-                // If at least a proper App exists, the Activity is started
 
+                // If at least a proper App exists, the Activity is started
                 Log.d("CLICK ON EVENT MAP", (String.valueOf(isIntentSafe)));
                 if (isIntentSafe) {
                     getContext().startActivity(calendarIntent);

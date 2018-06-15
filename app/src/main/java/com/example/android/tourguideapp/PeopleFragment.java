@@ -1,6 +1,5 @@
 package com.example.android.tourguideapp;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,9 +14,6 @@ import java.util.ArrayList;
  */
 public class PeopleFragment extends Fragment {
 
-    Context mContext;
-    // gets the ArrayList of People created in the SplashActivity
-
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
@@ -30,9 +26,7 @@ public class PeopleFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        mContext = getContext();
-
-        // gets the ArrayList of People created in the SplashActivity
+        // Creates an ArrayList of People Objects
         final ArrayList<People> people = new ArrayList<>();
 
         people.add(new People(0, getString(R.string.people_name_1), getString(R.string.people_surname_1), getString(R.string.people_role_1), getString(R.string.siteName1), getString(R.string.people_email_1), 333333333, Constants.GENDER_MALE, R.drawable.ph0));
@@ -52,6 +46,7 @@ public class PeopleFragment extends Fragment {
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
         listView.setAdapter(adapter);
+
         return rootView;
     }
 

@@ -92,6 +92,7 @@
     <string name="people_email_7">a.delgrande@igeam.it</string>
     <string name="people_email_8">m.gioacchino@igeam.it</string>
     <string name="people_email_9">a.graemes@igeam.it</string>
+    <!-- Project Objects attributes -->
     <string name="project_name_1">Virtual Reality Training</string>
     <string name="project_name_2">MSDS Software</string>
     <string name="project_url_2">http://www.sirios-chem.igeam.it/</string>
@@ -101,6 +102,7 @@
      \n The advantages of such an approach should be readily apparent. Not only can it cut out distractions, but it can totally immerse the trainee in the simulation, to the point where they begin to respond to it just as they would in a real-life situation.\n
       In other words, not only will trainees acquire information relevant to their job, but they can start practicing their skills right from day one.</string>
     <string name="project_description_2">Manage your organization\'s library of safety data sheets using Chemical Safety\'s cloud-based SDS management software. Employees can easily search and print manufacturer specific SDS\'s.</string>
+    <!-- Event Objects attributes -->
     <string name="event_name_0">Webinar on ISO 45001</string>
     <string name="event_name_1">Conference on Chemical Risk</string>
     <string name="event_description_0">Our ISO 45001:2018 Overview course delivered by webinar will provide details of the new terms, definitions and key requirements of ISO 45001:2018.

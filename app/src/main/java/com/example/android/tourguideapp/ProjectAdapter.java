@@ -82,7 +82,7 @@ public class ProjectAdapter extends ArrayAdapter {
         mailBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // specifying SENDTO for the Intent makes sure that only email apps are selected to handle the intente
+                // specifying SENDTO for the Intent makes sure that only email apps are selected to handle the intent
                 // Creats the intent
                 Intent mailIntent = new Intent(Intent.ACTION_SENDTO);
                 mailIntent.setData(Uri.parse("mailto:")); // only email apps should handle this
@@ -126,7 +126,6 @@ public class ProjectAdapter extends ArrayAdapter {
                     if (isIntentSafe) {
                         getContext().startActivity(webIntent);
                     }
-
                 }
             });
         return listItemView;

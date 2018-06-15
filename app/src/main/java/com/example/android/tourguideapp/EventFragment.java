@@ -22,6 +22,7 @@ public class EventFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        // Creates an ArrayList of Event Objects
         final ArrayList<Event> events = new ArrayList<>();
         events.add(new Event(0, getString(R.string.event_name_0), getString(R.string.event_description_0), getString(R.string.event_location_address_0), getString(R.string.event_city_0), R.drawable.img45001, "Frank Pearson", Utility.convertStringToDate("23-06-2018 15:00", "dd-MM-yyyy H:mm"), 2));
         events.add(new Event(1, getString(R.string.event_name_1), getString(R.string.event_description_1), getString(R.string.event_location_address_1), getString(R.string.event_city_1), R.drawable.convegno_rischio_chimico, "Mary Anderson", Utility.convertStringToDate("12-07-2018 09:00", "dd-MM-yyyy H:mm"), 4));

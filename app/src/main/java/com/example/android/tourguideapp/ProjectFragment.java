@@ -25,14 +25,12 @@ public class ProjectFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.list_layout, container, false);
 
+        // Creates an ArrayList of Project Objects
         final ArrayList<Project> projects = new ArrayList<>();
-
         projects.add(new Project(0, getString(R.string.project_name_1), getString(R.string.project_description_1), R.drawable.project_vr_trainer, getString(R.string.project_1_contact_person), Utility.convertStringToDate("30-09-2018", "dd-MM-yyyy"), ""));
-
         projects.add(new Project(1, getString(R.string.project_name_2), getString(R.string.project_description_2), R.drawable.project_sirios_chem, getString(R.string.project_2_contact_person), Utility.convertStringToDate("30-10-2018", "dd-MM-yyyy"), getString(R.string.project_url_2)));
         
         ProjectAdapter adapter = new ProjectAdapter(getActivity(), projects);
-
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
         // Since we use cardview in this Fragment we hide the Divider in the listView
